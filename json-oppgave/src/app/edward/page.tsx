@@ -1,31 +1,29 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Header from "@/components/ui/header";
+import list from "@/app/edward/list.json"; // Import JSON-filen med vitsene
 
 export default function Home() {
-  const [jokes, setJokes] = useState<string[]>([]);
+  const [jokes, setJokes] = useState<{}>([]);
 
   useEffect(() => {
-    // Fetch jokes from list.json
-    fetch("/path/to/list.json") // Replace with the correct path to your list.json file
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch jokes");
-        }
-        return response.json();
-      })
-      .then((data) => setJokes(data))
-      .catch((error) => console.error(error));
+    // Sett vitsene fra JSON-filen i state
+    setJokes(list);
   }, []);
 
   return (
     <div className="">
       <Header />
       <p>Mine beste jokes</p>
-      <ul>
-        {jokes.map((joke, index) => (
-          <li key={index}>{joke}</li>
+      <div>
+        {Object.entries(jokes).map(([key, value]: any) => (
+          <div key={key} className="flex flex-col items-center justify-center p-4">
+            <h2 className="text-2xl font-bold">{key}</h2>
+            <p className="text-lg">{value}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
