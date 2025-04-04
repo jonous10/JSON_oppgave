@@ -17,5 +17,14 @@ function showalljokes() {
     alljokesDiv.innerHTML = Object.values(jokes).map(joke => `<p>- ${joke}</p>`).join('');
     alljokesDiv.style.display ='block';
 }
+//denne gir deg mulig heten til at du kan velge hvilken informasjon/vits du har lyst til og se i fra JSON Filen
+function showspecificJoke() {
+    const jokeNumber = document.getElementById('jokeNumber').value;
+    if (jokes[jokesNumber]) {
+        document.getElementById('joke').textContent = jokes[jokeNumber];
+    }else{
+        document.getElementById('joke').textContent = "Ugylid vitsnummer.";
+    }
+ }
 
 fetchJokes();
