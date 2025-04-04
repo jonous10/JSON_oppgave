@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/ui/header";
 import list from "@/app/edward/list.json"; // Import JSON-filen med vitsene
 import { Button } from "@/components/ui/button";
+import { AvatarDemo } from "@/components/ui/profile";
 
 export default function Home() {
   const [jokes, setJokes] = useState<{}>([]); // State for å lagre vitsene
@@ -16,6 +17,7 @@ export default function Home() {
   return ( 
     <div className=""> 
       <Header />
+      <AvatarDemo />
       <p>Mine beste jokes</p>
       <Button>hawk</Button>
       <div>
