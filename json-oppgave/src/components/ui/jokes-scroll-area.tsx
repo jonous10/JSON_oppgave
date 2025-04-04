@@ -14,7 +14,7 @@ export function JokesScrollArea({jokeData}: JokesScrollAreaProps) {
   return (
     <ScrollArea className="h-180 w-220 rounded-md border">
       <div className="p-4 ">
-        <h4 className="mb-4 text-sm font-medium leading-none">Jokes</h4>
+        <h4 className="mb-4 text-sm font-medium leading-none">{jokeData?.metadata}</h4>
         {jokeData && jokeData.jokes.map((jokeObj, index) => (
           <div key={index} >
             <div className="text-sm p-3">
