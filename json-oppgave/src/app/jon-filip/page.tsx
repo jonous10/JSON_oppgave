@@ -25,7 +25,7 @@ export default function Home() {
       <Button
       onClick={updateRandomJoke}
       >Get Random Joke</Button>
-      <div>
+      <div className="justify-center items-center flex p-40">
         <p>Random Joke : {randomJoke ? randomJoke.joke : "No joke selected"}</p>
       </div>
       <div className="justify-center items-center flex p-40">
