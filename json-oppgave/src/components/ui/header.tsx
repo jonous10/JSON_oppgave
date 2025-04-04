@@ -4,6 +4,7 @@ import Link from "next/link";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "./navigation-menu";
 import { ThemeToggle } from "./theme-toggle";
 import { Separator } from "./separator";
+import { ProfilePopover } from "./profile-popover";
 
 export default function Header() {
     return (
@@ -41,8 +42,11 @@ export default function Header() {
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="ml-auto">
-                            <ThemeToggle></ThemeToggle>
+                        <NavigationMenuItem className="ml-auto mr-0">
+                            <div className="flex flex-row gap-4">
+                                <ThemeToggle/>
+                                <ProfilePopover/>
+                            </div>
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </div>

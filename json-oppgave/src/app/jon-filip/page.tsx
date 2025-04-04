@@ -6,6 +6,7 @@ import { JokesScrollArea } from "@/components/ui/jokes-scroll-area";
 import { useState } from "react";
 import data from "@/app/jon-filip/jokes.json"
 import { Button } from "@/components/ui/button";
+import { AvatarDemo } from "@/components/ui/profile";
 
 // If you see this you are GAY
 
