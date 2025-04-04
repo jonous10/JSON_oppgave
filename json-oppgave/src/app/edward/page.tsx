@@ -12,17 +12,8 @@ export default function Home() {
   return ( 
     <div className=""> 
       <Header />
-      <p>Mine beste jokes</p>
       <div className="justify-center flex flex-col items-center">
         <JokeShow jokeData={list}  />
-      </div>
-      <div>
-        {list.map((jokeObj: {id: number, joke: string}, index: number) => (  
-          <div key={index} className="flex flex-col items-center justify-center p-4"> 
-            <h2 className="text-2xl font-bold">{jokeObj.id}</h2>  
-            <p className="text-lg">{jokeObj.joke}</p>  
-          </div>  
-        ))}  
       </div>
     </div>
   );
