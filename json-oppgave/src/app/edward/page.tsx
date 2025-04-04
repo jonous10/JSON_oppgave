@@ -17,7 +17,6 @@ export default function Home() {
   return ( 
     <div className=""> 
       <Header />
-      <AvatarDemo />
       <p>Mine beste jokes</p>
       <Button>hawk</Button>
       <div>
