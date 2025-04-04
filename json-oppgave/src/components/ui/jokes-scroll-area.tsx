@@ -10,6 +10,7 @@ interface JokesScrollAreaProps {
 // Get this general structure from Shadcn ui "ScrollAreaDemo()"
 
 export function JokesScrollArea({jokeData}: JokesScrollAreaProps) {
+  // Her er mr.scroll area for å displaye jokes. (Jeg vil bruke Engelsk)
   return (
     <ScrollArea className="h-180 w-220 rounded-md border">
       <div className="p-4 ">
