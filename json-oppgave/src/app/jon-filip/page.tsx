@@ -6,6 +6,7 @@ import { JokesScrollArea } from "@/components/ui/jokes-scroll-area";
 import { useState } from "react";
 import data from "@/app/jon-filip/jokes.json"
 import { Button } from "@/components/ui/button";
+import { AvatarDemo } from "@/components/ui/profile";
 
 // If you see this you are GAY
 
@@ -22,10 +23,12 @@ export default function Home() {
   return (
     <div>
       <Header/>
+      <AvatarDemo/>
+      
       <Button
       onClick={updateRandomJoke}
       >Get Random Joke</Button>
-      <div>
+      <div className="justify-center items-center flex p-40">
         <p>Random Joke : {randomJoke ? randomJoke.joke : "No joke selected"}</p>
       </div>
       <div className="justify-center items-center flex p-40">
