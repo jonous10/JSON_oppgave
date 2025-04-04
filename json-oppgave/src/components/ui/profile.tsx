@@ -3,11 +3,15 @@ import {
     AvatarFallback,
     AvatarImage,
   } from "@/components/ui/avatar"
+
+  interface AvatarProps {
+    src: string;
+  }
   
-  export function AvatarDemo() {
+  export function AvatarDemo({src}: AvatarProps) {
     return (
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src={src} alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
     )

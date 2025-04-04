@@ -23,8 +23,6 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <AvatarDemo/>
-      
       <Button
       onClick={updateRandomJoke}
       >Get Random Joke</Button>
