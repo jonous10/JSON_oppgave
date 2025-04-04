@@ -15,12 +15,12 @@ export function JokesScrollArea({jokeData}: JokesScrollAreaProps) {
       <div className="p-4 ">
         <h4 className="mb-4 text-sm font-medium leading-none">Jokes</h4>
         {jokeData && jokeData.jokes.map((jokeObj, index) => (
-          <>
-            <div key={index} className="text-sm p-3">
+          <div key={index} >
+            <div className="text-sm p-3">
               {jokeObj.joke}
             </div>
             <Separator className="my-2" />
-          </>
+          </div>
         ))}
       </div>
     </ScrollArea>
