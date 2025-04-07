@@ -14,7 +14,7 @@ export default function Header() {
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <Link
-                            href="http://localhost:3000"
+                            href="http://localhost:3000/jon-filip"
                             legacyBehavior passHref
                             >
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -24,11 +24,11 @@ export default function Header() {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <Link
-                            href="http://localhost:3000/steam-search"
+                            href="http://localhost:3000/jon-filip/weather"
                             legacyBehavior passHref
                             >
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Steam Search
+                                    Weather Information
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
