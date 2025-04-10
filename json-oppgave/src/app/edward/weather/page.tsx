@@ -46,6 +46,13 @@ export default function Weather() {
     return <div>Loading...</div>;
   }
 
+  const weatherCondition =
+    weather.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
+
+    return (
+      <p> Condition: {weatherCondition.replace("_", " ")}</p>
+    );
+
   // Extract relevant weather data
   const temperature =
     weather.properties.timeseries[0].data.instant.details.air_temperature;
