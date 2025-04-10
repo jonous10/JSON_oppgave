@@ -19,7 +19,13 @@ npm run dev
 ```
 Now you can go to localhost:3000 or something similar (it will show you in the terminal) and if you want to go to a underpage just do this: localhost:3000/[underpage]
 
+For the Map in Weather pages to work you also need:
+```bash
+npm install react-leaflet leaflet
+```
+
 DOCUMENTS:
 
 Jon Filip:
 Jeg kan mass JSON, driver med det hver helg. Det er gøy, jeg hadde det gøy, hjalp Edward mye også. Directory for å finne min home page er: json-oppgave/src/app/jon-filip og derfor vil være i undersiden /jon-filip
+For å bruke Weather side
