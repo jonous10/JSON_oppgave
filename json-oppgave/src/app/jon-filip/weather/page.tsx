@@ -1,8 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Header from "@/components/ui/header";
-import { Input } from "@/components/ui/input";
 import MapPicker from "@/components/ui/map";
 import WeatherTable from "@/components/ui/weather-table";
 import { useEffect, useState } from "react";
@@ -34,8 +32,8 @@ export default function Home() {
 
     return (
         <div>
-            <Header />
-            <div className="h-96">
+            <Header/>
+            <div className="h-92">
                 <MapPicker onLocationSelected={(lat: number, lon: number) => {fetchDATA(lat, lon).then((res: any) => {
                     setWeatherData(res)
                 })}}/>
