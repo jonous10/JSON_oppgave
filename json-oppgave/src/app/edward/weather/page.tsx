@@ -57,7 +57,7 @@ export default function Weather() {
   if (error) return <div className="text-red-500">Error: {error}</div>;
   if (!weather)
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen bg-black text-white">
         <div className="loader"></div>
       </div>
     );
@@ -68,16 +68,11 @@ export default function Weather() {
 
   const currentTemperature = current.data.instant.details.air_temperature;
   const currentCondition = current.data.next_1_hours?.summary.symbol_code || "clear";
-  const backgroundClass = currentCondition.includes("rain")
-    ? "bg-blue-500 text-white"
-    : currentCondition.includes("cloud")
-    ? "bg-gray-300 text-black"
-    : "bg-yellow-300 text-black";
 
   return (
-    <div className={`p-4 min-h-screen ${backgroundClass}`}>
+    <div className="p-4 min-h-screen bg-black text-white">
       {/* Current Weather */}
-      <div className="mb-6 p-4 border rounded bg-white shadow">
+      <div className="mb-6 p-4 border rounded bg-gray-800 shadow">
         <h2 className="text-xl font-bold">Current Weather</h2>
         <div className="flex items-center gap-4">
           <img
@@ -100,7 +95,7 @@ export default function Weather() {
         </div>
         <button
           onClick={() => setIsCelsius(!isCelsius)}
-          className="p-2 bg-gray-500 text-white rounded mt-2"
+          className="p-2 bg-gray-600 text-white rounded mt-2"
         >
           Toggle to {isCelsius ? "Fahrenheit" : "Celsius"}
         </button>
@@ -114,14 +109,14 @@ export default function Weather() {
             value={latitude}
             onChange={(e) => setLatitude(e.target.value)}
             placeholder="Latitude"
-            className="p-2 border rounded"
+            className="p-2 border rounded bg-gray-700 text-white"
           />
           <input
             type="text"
             value={longitude}
             onChange={(e) => setLongitude(e.target.value)}
             placeholder="Longitude"
-            className="p-2 border rounded"
+            className="p-2 border rounded bg-gray-700 text-white"
           />
           <button type="submit" className="p-2 bg-blue-500 text-white rounded">
             Get Weather
@@ -152,7 +147,7 @@ export default function Weather() {
             hour.data.next_1_hours?.details.precipitation_amount || 0;
 
           return (
-            <li key={index} className="p-4 border rounded shadow bg-black">
+            <li key={index} className="p-4 border rounded shadow bg-gray-800">
               <div className="flex items-center gap-2 mb-2">
                 <img
                   src={`/icons/${condition}.png`}
